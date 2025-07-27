@@ -6,8 +6,9 @@ import Dashboard from './Pages/Dashboard';
 const Routing = () => {
   return (
     <Routes>
-        <Route path="/" element={Dashboard} />
+        <Route path="/" element={<Dashboard/>} />
         
+       
     </Routes>
   )
 }

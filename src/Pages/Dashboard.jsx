@@ -11,7 +11,7 @@ import Clock from "../Components/Clock";
 export default function Dashboard() {
   return (
     <>
-      <div className="min-h-screen bg-gray-50 p-6">
+      <div className="min-h-screen flex-grow:4 bg-gray-50 p-6">
         <div className="grid grid-cols-12 gap-6">
           
 
@@ -19,9 +19,7 @@ export default function Dashboard() {
             <div className="flex justify-between items-center">
               <div className="text-2xl font-semibold">Dashboard</div>
               <Input placeholder="Search transaction, invoices or help" className="col-span-10" />
-              <div className="flex justify-end mb-4">
-                <Clock />
-              </div>
+              
 
             </div>
 
