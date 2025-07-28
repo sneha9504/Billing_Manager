@@ -1,5 +1,7 @@
 import React from 'react'
 import Clock from './Clock'
+import {authState} from '../Pages/authForm'
+
 
 const Head = () => {
     return (
@@ -8,13 +10,12 @@ const Head = () => {
                 <img
                     src="./logo.svg"
                     alt="Billora Logo"
-                    className="w-20 hover:w-24 transition-all duration-300"
+                    className="w-30 hover:w-24 transition-all duration-300"
                 />
-                <span className="text-xl font-bold text-black-700">Billora</span>
             </div>
             <div className="flex items-center gap-4 ml-auto">
                 <Clock />
-                <div className="text-gray-600">Welcome, User</div>
+                <div className="text-gray-600">Welcome, {authState.currentUser.email}</div>
             </div>
 
 
