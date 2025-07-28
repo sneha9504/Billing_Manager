@@ -58,7 +58,6 @@ const AuthForm = () => {
     };
     const navigate = useNavigate();
 
-
     useEffect(() => {
         if (authState.currentUser) {
             navigate("/home");
