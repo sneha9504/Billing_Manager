@@ -34,11 +34,11 @@ const AuthForm = () => {
                 signUp({
                     email: formData.email,
                     password: formData.password,
-                    username: formData.Username,
+                    username: formData.username,
                 })
             );
         } else {
-            dispatch(logIn({ email: formData.email, password: formData.password }));
+            dispatch(logIn({ email: formData.email, password: formData.password ,username: formData.username}));
         }
     };
 
@@ -53,7 +53,7 @@ const AuthForm = () => {
             email: "",
             password: "",
             confirmPassword: "",
-            Username: "",
+            username: "",
         });
     };
     const navigate = useNavigate();
@@ -120,15 +120,15 @@ const AuthForm = () => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-2 border rounded-xl"
                                     />
-                                    {/* <input
+                                    <input
                                         type="text"
-                                        name="Username"
+                                        name="username"
                                         placeholder="Username"
                                         required
                                         value={formData.username}
                                         onChange={handleChange}
                                         className="w-full px-4 py-2 border rounded-xl"
-                                    /> */}
+                                    />
                                 </>
                             )}
                             <button
@@ -156,4 +156,4 @@ const AuthForm = () => {
     );
 };
 
-export default { AuthForm, authState }; ;
+export default AuthForm; 

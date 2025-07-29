@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  users: [], 
+  users: [],
   currentUser: null,
   error: null,
 };
@@ -11,13 +11,14 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     signUp(state, action) {
-      const { email, password , username } = action.payload;
+      const { email, password, username } = action.payload;
       const exists = state.users.find((u) => u.email === email);
       if (exists) {
         state.error = "User already exists";
       } else {
-        state.users.push({ email, password,username});
-        state.currentUser = { email };
+        const newUser = { email, password, username };
+        state.users.push(newUser);
+        state.currentUser = { email, username }; // ✅ username included here
         state.error = null;
       }
     },
@@ -27,7 +28,7 @@ const authSlice = createSlice({
         (u) => u.email === email && u.password === password
       );
       if (user) {
-        state.currentUser = { email };
+        state.currentUser = { email, username: user.username }; // ✅ includes username
         state.error = null;
       } else {
         state.error = "Invalid credentials";

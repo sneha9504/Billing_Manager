@@ -1,24 +1,25 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom';
-import Layout from './Components/Layout';
-import AuthForm from './Pages/authForm';
-import { Layout } from 'lucide-react';
+// src/Routing.jsx
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const ProtectedRoute = ({ children }) => {
-  const user = useSelector((state) => state.auth.currentUser);
-  return user ? children : <Navigate to="/" />;
-};
+import Layout from "./Components/Layout";
+import Dashboard from "./Pages/Dashboard";
+import Products from "./Pages/Products";
+import AuthForm from "./Pages/AuthForm";
+
 const Routing = () => {
-
   return (
-    <Routes>
-      <Route path="/" element={<AuthForm />} />
-      <ProtectedRoute>
-        <Route path="/home" element={<Layout />} />
-      </ProtectedRoute>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AuthForm />} />
+        <Route path="/home" element={<Layout />}>
+           <Route index element={<Dashboard />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="products" element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-    </Routes>
-  )
-}
-
-export default Routing
+export default Routing;

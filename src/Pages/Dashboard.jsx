@@ -7,20 +7,28 @@ import BudgetSummary from "../Components/BudgetSummary";
 import PendingTransactions from "../Components/PendingTransactions";
 import { Input } from "../Components/Ui/Input";
 import Clock from "../Components/Clock";
+import Button  from "../Components/Ui/Button";
 
 export default function Dashboard() {
   return (
     <>
-      <div className="min-h-screen flex-grow:4 bg-gray-50 p-6">
+      <div className="bg-gray-200 text-black rounded-2xl shadow-lg p-4 h-full w-full">
         <div className="grid grid-cols-12 gap-6">
-          
+
 
           <div className="col-span-10 space-y-6">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col justify-between">
               <div className="text-2xl font-semibold">Dashboard</div>
-              <Input placeholder="Search transaction, invoices or help" className="col-span-10" />
-              
 
+              <div className="mt-4 flex items-center gap-2">
+                <Input
+                  placeholder="Search transaction, invoices or help"
+                  className="w-full"
+                />
+                <Button className="bg-blue-600 text-white hover:bg-blue-700">
+                  Search
+                </Button>
+              </div>
             </div>
 
             <TopSummaryCards />

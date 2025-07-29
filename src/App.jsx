@@ -1,16 +1,8 @@
-import React from "react";                   
+import React from "react";
+import Routing from "./Routing";
 
-import AuthForm from "./Pages/authForm";
-
-const App = () => {
-  return (
-    <>
-    <div>
-    <AuthForm />
-    </div>
-    </>
-  
-  );
-};
+function App() {
+  return <Routing />;
+}
 
 export default App;
