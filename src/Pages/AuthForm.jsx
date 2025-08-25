@@ -69,7 +69,7 @@ const AuthForm = () => {
             <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md space-y-6">
                 {authState.currentUser ? (
                     <div className="text-center space-y-4">
-                        <User className="mx-auto text-blue-600" size={32} />
+                        {/* <User className="mx-auto text-blue-600" size={32} />
                         <h2 className="text-2xl font-bold">
                             Welcome, {authState.currentUser.username || authState.currentUser.email}
                         </h2>
@@ -78,7 +78,7 @@ const AuthForm = () => {
                             className="bg-red-500 text-white px-4 py-2 rounded-xl hover:bg-red-600"
                         >
                             Logout
-                        </button>
+                        </button> */}
                     </div>
                 ) : (
                     <>

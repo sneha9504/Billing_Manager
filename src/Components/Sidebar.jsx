@@ -11,10 +11,9 @@ export default function Sidebar() {
           <NavLink
             to="/home/dashboard"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md font-medium transition ${
-                isActive
-                  ? "bg-white/20 text-white"
-                  : "text-white/80 hover:text-white hover:bg-white/10"
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
               }`
             }
           >
@@ -24,36 +23,68 @@ export default function Sidebar() {
           <NavLink
             to="/home/products"
             className={({ isActive }) =>
-              `block px-3 py-2 rounded-md font-medium transition ${
-                isActive
-                  ? "bg-white/20 text-white"
-                  : "text-white/80 hover:text-white hover:bg-white/10"
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
               }`
             }
           >
             Products
           </NavLink>
 
-          <div className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            Inbox
-          </div>
+
         </div>
 
         {/* Billing */}
         <div className="space-y-1 pt-4 border-t border-white/20">
-          <div className="text-xs uppercase tracking-wide text-gray-200 mt-2 px-3">
+          <NavLink
+            to="/home/billing"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+              }`
+            }
+          >
             Billing
-          </div>
+          </NavLink>
 
-          <div className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
+          <NavLink
+            to="/home/transactions"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+              }`
+            }
+          >
             Transactions
-          </div>
-          <div className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            Invoices
-          </div>
-          <div className="px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
+          </NavLink>
+
+          <NavLink
+            to="/home/expenses"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+              }`
+            }
+          >
+            Expenses Tracker
+          </NavLink>
+
+          <NavLink
+            to="/home/reports"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+              }`
+            }
+          >
             Reports
-          </div>
+          </NavLink>
+
         </div>
 
         {/* Settings */}
@@ -62,18 +93,19 @@ export default function Sidebar() {
             Settings
           </div>
 
-          <div className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            <Settings size={16} /> Account Settings
-          </div>
-          <div className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            <CreditCard size={16} /> Payment Settings
-          </div>
-          <div className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            <FileText size={16} /> Bill Details
-          </div>
-          <div className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white hover:bg-white/10 rounded-md transition cursor-pointer">
-            <HelpCircle size={16} /> Help Center
-          </div>
+          <NavLink
+            to="/home/account"
+            className={({ isActive }) =>
+              `block px-3 py-2 rounded-md font-medium transition ${isActive
+                ? "bg-white/20 text-white"
+                : "text-white/80 hover:text-white hover:bg-white/10"
+              }`
+            }
+          >
+           <Settings size={16} /> Account Settings
+          </NavLink>
+
+          
         </div>
       </nav>
     </div>

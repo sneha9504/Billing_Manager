@@ -12,7 +12,7 @@ import Button  from "../Components/Ui/Button";
 export default function Dashboard() {
   return (
     <>
-      <div className="bg-gray-200 text-black rounded-2xl shadow-lg p-4 h-full w-full">
+      <div className="bg-gray-200 text-black rounded-2xl shadow-lg p-4 h-auto w-auto">
         <div className="grid grid-cols-12 gap-6">
 
 

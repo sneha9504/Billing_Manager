@@ -5,6 +5,7 @@ import Clock from "./Clock";
 import { useSelector, useDispatch } from "react-redux";
 import { logOut } from "../redux/auth/authSlice";
 import { useNavigate } from "react-router-dom";
+import logo from '../assets/Billora-logo.png';
 
 const Head = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -46,9 +47,9 @@ const Head = () => {
         <>
             <div className="flex items-center gap-2">
                 <img
-                    src="/public/logo.svg"
+                    src={logo}
                     alt="Billora Logo"
-                    className="w-30 hover:w-24 transition-all duration-300"
+                    className="w-50 p-3 transition-all duration-300"
                 />
             </div>
 
@@ -59,16 +60,19 @@ const Head = () => {
                     className="flex items-center text-gray-700 hover:text-blue-600 font-medium"
                 >
                     Welcome, {username}
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-4 h-4 ml-1 text-gray-600 group-hover:text-blue-600"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <div className="flex items-center group cursor-pointer">
+                   
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="size-5 ml-1 text-gray-600 group-hover:text-blue-600 transition-colors duration-200"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
                 </button>
 
                 {dropdownOpen && (
